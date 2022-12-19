@@ -1,46 +1,71 @@
+:root {
+  --primary-color: #212121;
+  --bg: #2f303a;
+  --highlight: #ffffff;
+  --lowlight: #000000;
+  --logo-first-part-color: #2196f3;
+  --logo-second-part-color: var(--lowlight);
+  --logo-second-part-color-alternative: var(--highlight);
+  --hover-color: var(--logo-first-part-color);
+  --focus-color: var(--logo-first-part-color);
+  --desciption: #757575;
+  --phone-mail-header-color: var(--desciption);
+  --phone-mail-foother-color: rgba(255, 255, 255, 0.6);
+  --button-shadow: rgba(0, 0, 0, 0.15);
+  --box-shadow-1: rgba(0, 0, 0, 0.1);
+  --box-shadow-2: rgba(0, 0, 0, 0.08);
+  --box-shadow-3: rgba(0, 0, 0, 0.12);
+  --bg-inside-button: #f5f4fa;
+}
+
 body {
   font-family: 'Roboto', 'Arial', sans-serif;
-  color: #212121;
+  color: var(--primary-color);
 }
+
 /* usunięcie podkreśleń w odnośnikach */
 .non-decoration {
   text-decoration: none;
 }
 
 /* definicja czcionki napisu WebStudio oraz barwy pierwszej cześci tego napisu */
-.webstudio {
+.logo {
   font-family: 'Raleway';
   font-style: normal;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.192;
   letter-spacing: 0.03em;
-  color: #2196f3;
+  color: var(--logo-first-part-color);
 }
 
 /* definicja barwy drugiej cześci napisu WebStudio umieszczonego w nagłówku strony */
-.webstudio-part-black {
-  color: #000000;
+.logo-second-part {
+  color: var(--logo-second-part-color);
 }
 
 /* definicja barwy drugiej cześci napisu WebStudio umieszczonego w stopce strony */
-.webstudio-part-white {
-  color: #ffffff;
+.logo-second-part-alternative {
+  color: var(--logo-second-part-color-alternative);
 }
-
+.list {
+  margin-left: 0;
+  padding-left: 0;
+  list-style-position: none;
+}
 /* kolorystyka linków w nawigacji */
 .nav-links .link {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.143;
   letter-spacing: 0.02em;
-  color: #212121;
+  color: var(--primary-color);
 }
 .nav-links .link:hover {
-  color: #2196f3;
+  color: var(--hover-color);
 }
 .nav-links .link:focus {
-  color: #2196f3;
+  color: var(--focus-color);
 }
 
 /* definicja czcionki telefonu i e-maila w nagłówku strony */
@@ -49,25 +74,25 @@ body {
   font-size: 14px;
   line-height: 1.143;
   letter-spacing: 0.02em;
-  color: #757575;
+  color: var(--phone-mail-header-color);
 }
 /* reakcja linków telefon i e-mail w nagłówku strony */
 .header-phone-email .link:hover {
-  color: #2196f3;
+  color: var(--hover-color);
 }
 .header-phone-email .link:focus {
-  color: #2196f3;
+  color: var(--focus-color);
 }
 
 /* kolorystyka linków telefon i e-mail w stopce strony */
 .footer-phone-email .link {
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--phone-mail-foother-color);
 }
 .footer-phone-email .link:hover {
-  color: #2196f3;
+  color: var(--hover-color);
 }
 .footer-phone-email .link:focus {
-  color: #2196f3;
+  color: var(--focus-color);
 }
 
 /* definicje czcionek do opisów */
@@ -75,7 +100,7 @@ body {
   font-size: 14px;
   line-height: 2;
   letter-spacing: 0.03em;
-  color: #757575;
+  color: var(--desciption);
 }
 
 .team-members-specialties {
@@ -83,24 +108,24 @@ body {
   line-height: 1.188;
   text-align: center;
   letter-spacing: 0.03em;
-  color: #757575;
+  color: var(--desciption);
 }
 
 .portfolio-type-project {
   font-size: 16px;
   line-height: 1.875;
   letter-spacing: 0.03em;
-  color: #757575;
+  color: var(--desciption);
 }
 
-/* szare tło wykorzystywane na stronie głównej */
-.background-grey {
-  background: #2f303a;
+/* tło wykorzystywane na stronie głównej i stopce */
+.background {
+  background: var(--bg);
 }
 
 /* definicja przycisku "Zamów usługę" */
 .button-zu {
-  background-color: #f5f4fa;
+  background-color: var(--bg-inside-button);
   border: none;
   padding: 10px 42px;
   text-align: center;
@@ -112,19 +137,19 @@ body {
   cursor: pointer;
 }
 .button-zu:hover {
-  background: #2196f3;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  color: #ffffff;
+  background: var(--hover-color);
+  box-shadow: 0px 4px 4px var(--button-shadow);
+  color: var(--highlight);
 }
 .button-zu:focus {
-  background: #2196f3;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  color: #ffffff;
+  background: var(--focus-color);
+  box-shadow: 0px 4px 4px var(--button-shadow);
+  color: var(--highlight);
 }
 
 /* definicja czcionki użytej w filtrze "Porfolio" */
 .button-po {
-  background-color: #f5f4fa;
+  background-color: var(--bg-inside-button);
   border: none;
   padding: 6px 22px;
   text-align: center;
@@ -136,16 +161,16 @@ body {
   cursor: pointer;
 }
 .button-po:hover {
-  background: #2196f3;
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
-  color: #ffffff;
+  background: var(--hover-color);
+  box-shadow: 0px 3px 1px var(--box-shadow-1), 0px 1px 2px var(--box-shadow-2),
+    0px 2px 2px var(--box-shadow-3);
+  color: var(--highlight);
 }
 .button-po:focus {
-  background: #2196f3;
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
-  color: #ffffff;
+  background: var(--focus-color);
+  box-shadow: 0px 3px 1px var(--box-shadow-1), 0px 1px 2px var(--box-shadow-2),
+    0px 2px 2px var(--box-shadow-3);
+  color: var(--highlight);
 }
 
 /* ustawienia użytych na stronie nagłówków */
@@ -156,7 +181,7 @@ body {
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: #ffffff;
+  color: var(--highlight);
 }
 .our-team-and-what-we-do {
   font-weight: 700;
@@ -171,7 +196,7 @@ body {
   line-height: 1.143;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: #212121;
+  color: var(--primary-color);
 }
 .names-team-members {
   font-weight: 500;
@@ -179,14 +204,14 @@ body {
   line-height: 1.188;
   text-align: center;
   letter-spacing: 0.03em;
-  color: #212121;
+  color: var(--primary-color);
 }
 .portfolio-name-project {
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
-  color: #212121;
+  color: var(--primary-color);
 }
 
 /* parametry danych adresowych w stopce */
@@ -195,5 +220,5 @@ body {
   font-size: 14px;
   line-height: 2;
   letter-spacing: 0.03em;
-  color: #ffffff;
+  color: var(--highlight);
 }
